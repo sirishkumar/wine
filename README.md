@@ -10,6 +10,6 @@ This repository demonstrates how to integrate [GitHub Actions](https://docs.gith
 
 The heart of this repository is [this YAML](https://github.com/sayakpaul/wine/blob/wandb-integration/.github/workflows/cml.yaml) file that defines a workflow that runs automatically after a new commit is pushed. 
 
-## Acknowledgements
+## Acknowledgments
 
 [This video](https://www.youtube.com/watch?v=9BgIDqAzfuA) by DVCorg helped me a lot to clear the initial concepts regarding GitHub Actions. 
