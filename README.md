@@ -6,7 +6,7 @@ This repository demonstrates how to integrate [GitHub Actions](https://docs.gith
 - Cache Python dependencies so that old dependencies do not get installed each time a run is triggered. 
 - Generate a `metrics.csv` file after a run is successfully completed. 
 
-![](https://i.ibb.co/JqZWHDC/image.png)
+<div align="center"<img src="https://i.ibb.co/JqZWHDC/image.png"></img></div>
 
 The heart of this repository is [this YAML](https://github.com/sayakpaul/wine/blob/wandb-integration/.github/workflows/cml.yaml) file that defines a workflow that runs automatically after a new commit is pushed. 
 
