@@ -8,7 +8,7 @@ This repository demonstrates how to integrate [GitHub Actions](https://docs.gith
 
 <div align="center"><img src="https://i.ibb.co/JqZWHDC/image.png"></img></div>
 
-The heart of this repository is [this YAML](https://github.com/sayakpaul/wine/blob/wandb-integration/.github/workflows/cml.yaml) file that defines a workflow that runs automatically after a new commit is pushed. 
+The heart of this repository is [this YAML](https://github.com/sayakpaul/wine/blob/experiment-1/.github/workflows/cml.yaml) file that defines a workflow that runs automatically after a new commit is pushed. 
 
 ## Acknowledgments
 
