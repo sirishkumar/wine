@@ -31,7 +31,7 @@ jobs:
       - name: Train model and log metrics to wandb
         run: |
           python train.py --key ${{ secrets.WANDB_API_KEY }}
-
+          
       - name: Store the run URL
         id: changestring
         run: |
@@ -42,12 +42,14 @@ jobs:
           name: metrics csv file
           path: metrics.csv
 
+# https://github.community/t/how-to-make-one-workflow-dependent-on-the-other/131323/4?u=sayakpaul
+
   PR-Comment:
     runs-on: ubuntu-latest
     needs: [commit]
     
     steps:
-      - name: add PR issue comment
+      - name: Add PR issue comment
         run: |
           PRnumber=$(curl -s -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/${{github.repository}}/pulls?head=${{github.repository_owner}}:${{github.ref}} | jq -r '.[] | .number')
           echo "::set-env name=body::${{needs.commit.outputs.string}}"
