@@ -58,7 +58,7 @@ jobs:
           echo "::set-env name=body::${{needs.commit.outputs.string}}"
           echo $PRnumber
           echo "::set-env name=number::$(echo $PRnumber)"
-      - name: PR Comment
+      - name: Create PR comment
         uses: actions/github-script@v3
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
