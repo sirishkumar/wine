@@ -13,7 +13,8 @@ from sklearn.ensemble import RandomForestRegressor
 seed = 42
 
 # Set wandb up
-print(wandb.login(key=os.environ["WANDB_KEY"].strip()))
+print(os.environ["WANDB_KEY"])
+print(wandb.login(key=os.environ["WANDB_KEY"]))
 print(wandb.init(project="wandb-github-actions", entity="sayakpaul"))
 
 ################################
