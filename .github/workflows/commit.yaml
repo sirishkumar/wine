@@ -30,9 +30,7 @@ jobs:
       
       - name: Train model and log metrics to wandb
         run: |
-          python train.py 
-        env:
-          WANDB_KEY: ${{secrets.WANDB_API_KEY}}
+          python train.py --key ${{ secrets.WANDB_API_KEY }}
 
       - name: Store the run URL
         id: changestring
