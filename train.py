@@ -4,18 +4,22 @@ import seaborn as sns
 import pandas as pd 
 import numpy as np
 import subprocess
+import argparse
 import wandb
-import os
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
 
 # Set random seed
 seed = 42
 
+# Construct the argument parse and parse the arguments
+ap = argparse.ArgumentParser()
+ap.add_argument("-k", "--key", required=True,
+	help="wandb API key")
+args = vars(ap.parse_args())
+
 # Set wandb up
-a = os.environ["WANDB_KEY"]
-print(a)
-print(wandb.login(key=os.environ["WANDB_KEY"]))
+print(wandb.login(key=args["key"]))
 print(wandb.init(project="wandb-github-actions", entity="sayakpaul"))
 
 ################################
