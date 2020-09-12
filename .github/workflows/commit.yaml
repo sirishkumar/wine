@@ -31,10 +31,11 @@ jobs:
       - name: Train model and log metrics to wandb
         run: |
           python train.py --key ${{ secrets.WANDB_API_KEY }}
-          
+
       - name: Store the run URL
         id: changestring
         run: |
+          cat run.txt
           echo "::set-output name=string::$(<run.txt)"
       - name: Archive metrics
         uses: actions/upload-artifact@v2
