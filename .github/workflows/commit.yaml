@@ -37,8 +37,7 @@ jobs:
       - name: Store the run URL
         id: changestring
         run: |
-          cat run.txt
-          echo "::set-output name=string::$(<run.txt)"
+          echo "::set-output name=string::$(cat run.txt)"
 
       - name: Archive metrics
         uses: actions/upload-artifact@v2
