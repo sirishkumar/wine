@@ -37,6 +37,8 @@ jobs:
         run: |
           cat run.txt
           echo "::set-output name=string::$(<run.txt)"
+        outputs:
+          string: ${{ steps.changestring.outputs.string}}
       - name: Archive metrics
         uses: actions/upload-artifact@v2
         with:
