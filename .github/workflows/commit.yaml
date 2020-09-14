@@ -5,6 +5,8 @@ on: [push]
 jobs:
   commit:
     runs-on: ubuntu-latest
+    outputs:
+      string: ${{ steps.changestring.outputs.string}}
     
     steps:
       - uses: actions/checkout@v2
@@ -37,8 +39,7 @@ jobs:
         run: |
           cat run.txt
           echo "::set-output name=string::$(<run.txt)"
-        outputs:
-          string: ${{ steps.changestring.outputs.string}}
+
       - name: Archive metrics
         uses: actions/upload-artifact@v2
         with:
