@@ -3,4 +3,4 @@ sklearn
 matplotlib
 seaborn
 numpy
-wandb
+wandb==0.9.6
