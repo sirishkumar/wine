@@ -9,7 +9,9 @@ This repository demonstrates how to integrate [GitHub Actions](https://docs.gith
 - Upon a new pull request - 
   - Fetch the latest `wandb` run URL and comment that on the PR.
 
+<br>
 <div align="center"><img src="https://i.ibb.co/JqZWHDC/image.png"></img></div>
+
 
 ## Workflow files
 * https://github.com/sayakpaul/wine/blob/experiment-1/.github/workflows
