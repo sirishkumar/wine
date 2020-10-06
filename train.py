@@ -20,7 +20,7 @@ args = vars(ap.parse_args())
 
 # Set wandb up
 print(wandb.login(key=args["key"]))
-print(wandb.init(project="wandb-github-actions", entity="sayakpaul"))
+print(wandb.init(project="wandb-github-action"))
 
 ################################
 ########## DATA PREP ###########
