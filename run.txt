@@ -1,1 +1,1 @@
-https://app.wandb.ai/sirishkumar/wandb-github-action/runs/2qq4y37e
+https://app.wandb.ai/sirishkumar/wandb-github-action/runs/2ve8vq34
